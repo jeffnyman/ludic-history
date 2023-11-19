@@ -16,6 +16,7 @@ body {
 
 :where(article, article section) > * {
   margin-block-start: var(--flow-space, 0.5em);
+  word-spacing: 0.16em;
 }
 
 img {
@@ -145,4 +146,11 @@ hr {
     rgba(0 0 0 / 75%),
     rgba(0 0 0 / 0%)
   );
+}
+
+p,
+li,
+blockquote {
+  text-align: justify;
+  text-justify: inter-word;
 }
