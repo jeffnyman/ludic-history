@@ -19,9 +19,13 @@ body {
   word-spacing: 0.16em;
 }
 
+:where(p, blockquote, img, ul, ol) + p {
+  text-indent: var(--para-indent);
+}
+
 img {
-  /* Center images */
   margin: 0 auto;
+  padding: 1em 0;
 }
 
 em {
@@ -113,6 +117,7 @@ a:focus {
 blockquote {
   display: block;
   background: #fff;
+  margin: 1.2em 0;
   padding: 1.2em 1.875em 1.2em 2.68em;
   position: relative;
   text-align: justify;
