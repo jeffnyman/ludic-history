@@ -113,20 +113,20 @@ a:focus {
 blockquote {
   display: block;
   background: #fff;
-  padding: 15px 20px 15px 45px;
+  padding: 1.2em 1.875em 1.2em 2.68em;
   position: relative;
   text-align: justify;
-  border-left: 15px solid #c76c0c;
-  border-right: 2px solid #c76c0c;
+  border-left: 15px solid var(--clr-primary);
+  border-right: 2px solid var(--clr-primary);
   box-shadow: 2px 2px 15px #ccc;
 }
 
 blockquote::before {
   font-family: "Times New Roman", serif;
   content: "\201C";
-  font-size: 60px;
+  font-size: 4em;
   font-weight: bold;
-  color: #999;
+  color: var(--clr-primary);
   position: absolute;
   left: 10px;
   top: -10px;
