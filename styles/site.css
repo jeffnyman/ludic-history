@@ -1,0 +1,14 @@
+article {
+  display: grid;
+  grid-template-columns: 1fr min(65ch, 100% - 4rem) 1fr;
+}
+
+article > * {
+  grid-column: 2;
+}
+
+.full {
+  background-color: aqua;
+  width: 100%;
+  grid-column: 1 / -1;
+}
