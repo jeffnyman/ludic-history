@@ -1,0 +1,35 @@
+*,
+*::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+::marker {
+  /* Modification of the marker box of list items. */
+  color: var(--clr-primary);
+}
+
+::selection {
+  /* Modification of the selection highlight. */
+  color: #fff;
+  background: rgba(0 0 0 / 99%);
+}
+
+:where(html, body) {
+  /* Disable any vertical overscrolling. */
+  overscroll-behavior-y: none;
+}
+
+:where(img, picture, svg, video, canvas, audio, iframe, embed, object) {
+  /* Make media elements default to block rather than inline block. */
+  display: block;
+}
+
+:where(img, picture, svg, video) {
+  /* Keep media elements within borders of content. */
+  block-size: auto;
+  max-inline-size: 100%;
+  max-inline-size: min(55rem, 100%);
+}

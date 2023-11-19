@@ -11,6 +11,7 @@
   --ff-base-bold: "Montserrat-Bold", sans-serif;
   --ff-base-bold-italic: "Montserrat-BoldItalic", sans-serif;
   --ff-heading: "Kyiv Sans", sans-serif;
+  --ff-accent: "Open Sans", sans-serif;
 
   --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
   --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
