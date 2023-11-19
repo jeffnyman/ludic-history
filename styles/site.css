@@ -1,41 +1,117 @@
-article {
-  --gap: clamp(1rem, 6vw, 3rem);
-  --full: minmax(var(--gap), 1fr);
-  --content: min(65ch, 100% - var(--gap) * 2);
-  --popout: minmax(0, 2rem);
-  --feature: minmax(0, 5rem);
+@import url("./fonts.css");
+@import url("./root.css");
+@import url("./grid.css");
 
-  display: grid;
-  grid-template-columns:
-    [full-start]
-    var(--full)
-    [feature-start]
-    var(--feature)
-    [popout-start]
-    var(--popout)
-    [content-start] var(--content) [content-end]
-    var(--popout)
-    [popout-end]
-    var(--feature)
-    [feature-end]
-    var(--full) [full-end];
+*,
+*::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-article > * {
-  grid-column: content;
+html {
+  color-scheme: dark light;
 }
 
-.popout {
-  grid-column: popout;
-  background-color: thistle;
+body {
+  font-family: var(--ff-base);
+  font-size: var(--fs-400);
+  color: var(--clr-body);
+  line-height: 1.7;
 }
 
-.feature {
-  grid-column: feature;
-  background-color: paleturquoise;
+:where(article, article section) > * {
+  margin-block-start: var(--flow-space, 0.5em);
 }
 
-.full {
-  grid-column: full;
-  background-color: bisque;
+img {
+  max-width: 100%;
+  display: block;
+}
+
+em {
+  font-family: var(--ff-base-italic);
+}
+
+strong {
+  font-family: var(--ff-base-bold);
+}
+
+strong em {
+  font-family: var(--ff-base-bold-italic);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-heading);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 {
+  --font-weight: 120;
+  --font-midline: 0;
+  --font-contrast: 0;
+
+  font-size: var(--fs-800);
+  font-variation-settings: "wght" var(--font-weight), "MIDL" var(--font-midline),
+    "CONT" var(--font-contrast);
+  transition: font-variation settings 500ms;
+  color: var(--clr-primary);
+
+  &:hover {
+    --font-weight: 1000;
+    --font-midline: -1000;
+  }
+}
+
+h2 {
+  --font-weight: 100;
+  --font-midline: 0;
+  --font-contrast: 250;
+  --flow-space: 1em;
+
+  font-size: var(--fs-700);
+  font-variation-settings: "wght" var(--font-weight),
+    "CONT" var(--font-contrast), "MIDL" var(--font-midline);
+  transition: font-variation-settings 500ms;
+  color: var(--clr-primary);
+
+  &:hover {
+    --font-weight: 1000;
+    --font-midline: -1000;
+  }
+}
+
+h3 {
+  --font-weight: 190;
+  --font-midline: 0;
+  --font-contrast: 250;
+
+  font-size: var(--fs-600);
+  font-variation-settings: "wght" var(--font-weight),
+    "CONT" var(--font-contrast), "MIDL" var(--font-midline);
+  transition: font-variation-settings 500ms;
+  color: var(--clr-text);
+
+  &:hover {
+    --font-weight: 1000;
+    --font-midline: -1000;
+  }
+}
+
+h4 {
+  font-size: var(--fs-500);
+  color: var(--clr-primary);
+}
+
+a {
+  color: var(--clr-primary);
+}
+
+a:hover,
+a:focus {
+  color: var(--clr-accent);
 }

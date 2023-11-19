@@ -1,0 +1,33 @@
+:root {
+  --clr-body: hsl(204deg 20% 25%);
+  --clr-text: hsl(204deg 100% 1%);
+  --clr-surface: hsl(0deg 0% 100%);
+  --clr-primary: hsl(329deg 85% 43%);
+  --clr-secondary: hsl(208deg 83% 93%);
+  --clr-accent: hsl(89deg 85% 33%);
+
+  --ff-base: "Montserrat-Regular", sans-serif;
+  --ff-base-italic: "Montserrat-Italic", sans-serif;
+  --ff-base-bold: "Montserrat-Bold", sans-serif;
+  --ff-base-bold-italic: "Montserrat-BoldItalic", sans-serif;
+  --ff-heading: "Kyiv Sans", sans-serif;
+
+  --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
+  --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+  --fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
+  --fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
+  --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
+  --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+  --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-body: hsl(204deg 20% 75%);
+    --clr-text: hsl(0deg 0% 100%);
+    --clr-surface: hsl(204deg 100% 1%);
+    --clr-primary: hsl(329deg 85% 53%);
+    --clr-secondary: hsl(208deg 83% 17%);
+    --clr-accent: hsl(89deg 85% 33%);
+  }
+}
