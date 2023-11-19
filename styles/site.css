@@ -19,7 +19,7 @@ body {
   word-spacing: 0.16em;
 }
 
-:where(p, blockquote, img, ul, ol) + p {
+:where(p, blockquote, img, ul, ol) + p:not(.feature):not(.popout) {
   text-indent: var(--para-indent);
 }
 
@@ -158,4 +158,38 @@ li,
 blockquote {
   text-align: justify;
   text-justify: inter-word;
+}
+
+img.edge-left {
+  border-radius: 1em 2em 3em 4em;
+}
+
+img.edge-right {
+  border-radius: 2em 1em 4em 3em;
+}
+
+img.mask {
+  --g: #0000 98%, #000;
+  --r: 30px;
+
+  -webkit-mask: radial-gradient(var(--r) at 0 0, var(--g)) 0 0,
+    radial-gradient(var(--r) at 100% 0, var(--g)) 100% 0,
+    radial-gradient(var(--r) at 0 100%, var(--g)) 0 100%,
+    radial-gradient(var(--r) at 100% 100%, var(--g)) 100% 100%;
+  -webkit-mask-size: 51% 51%;
+  -webkit-mask-repeat: no-repeat;
+  mask: radial-gradient(var(--r) at 0 0, var(--g)) 0 0,
+    radial-gradient(var(--r) at 100% 0, var(--g)) 100% 0,
+    radial-gradient(var(--r) at 0 100%, var(--g)) 0 100%,
+    radial-gradient(var(--r) at 100% 100%, var(--g)) 100% 100%;
+  mask-size: 51% 51%;
+  mask-repeat: no-repeat;
+}
+
+img.prop70 {
+  width: 70%;
+}
+
+img.prop50 {
+  width: 50%;
 }
