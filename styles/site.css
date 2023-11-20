@@ -199,3 +199,17 @@ img.prop70 {
 img.prop50 {
   width: 50%;
 }
+
+.feature {
+  border: 1px solid rgb(107, 113, 177);
+  color: var(--note);
+  border-radius: 16px;
+  padding: 0.5em 0.8em;
+}
+
+.popout {
+  border: 1px solid rgb(107, 113, 177);
+  color: var(--note);
+  border-radius: 16px;
+  padding: 0.5em 0.8em;
+}

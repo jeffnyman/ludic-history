@@ -25,6 +25,7 @@
   --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
 
   --para-indent: 40px;
+  --note: #4d5b7c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,5 +36,7 @@
     --clr-primary: hsl(329deg 85% 53%);
     --clr-secondary: hsl(208deg 83% 17%);
     --clr-accent: hsl(89deg 85% 33%);
+
+    --note: #c67da6;
   }
 }
