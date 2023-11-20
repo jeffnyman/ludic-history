@@ -14,6 +14,10 @@ body {
   line-height: 1.7;
 }
 
+main {
+  margin-bottom: 2em;
+}
+
 :where(article, article section) > * {
   margin-block-start: var(--flow-space, 0.5em);
   word-spacing: 0.16em;
@@ -196,8 +200,16 @@ img.prop70 {
   width: 70%;
 }
 
+img.prop60 {
+  width: 60%;
+}
+
 img.prop50 {
   width: 50%;
+}
+
+img.dropblack {
+  filter: drop-shadow(black 1rem 1rem 30px);
 }
 
 .feature {
