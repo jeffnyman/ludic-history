@@ -36,6 +36,11 @@ article > * {
 }
 
 .full {
+  max-inline-size: unset;
   grid-column: full;
   background-color: bisque;
+}
+
+img.full {
+  background-color: inherit;
 }
