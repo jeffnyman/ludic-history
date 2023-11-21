@@ -196,6 +196,10 @@ img.mask {
   mask-repeat: no-repeat;
 }
 
+img.prop80 {
+  width: 80%;
+}
+
 img.prop70 {
   width: 70%;
 }
@@ -210,6 +214,24 @@ img.prop50 {
 
 img.dropblack {
   filter: drop-shadow(black 1rem 1rem 30px);
+}
+
+.image-grid {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.image-stack__item--bottom {
+  grid-column: 2 / -1;
+  grid-row: 1;
+}
+
+.image-stack__item--top {
+  grid-row: 1;
+  grid-column: 3 / span 8;
+  padding-top: 20%;
+  z-index: 1;
 }
 
 .feature {
